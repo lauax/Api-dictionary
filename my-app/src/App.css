@@ -1,0 +1,80 @@
+* {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+.header {
+  width: 100vw;
+  background-color: #007bff;
+  height: 10vh;
+  text-align: center;
+  justify-content: center;
+  font: 600 4vw Arial, sans-serif;
+}
+
+/* Style for the container div */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the form */
+form {
+  display: flex;
+  margin-bottom: 2em;
+  top: 1vh;
+  position: relative;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the error message */
+.error {
+  color: #ff0000;
+  margin-bottom: 10px;
+  top: 4vh;
+  position: relative;
+}
+
+/* Style for the API response */
+.response {
+  margin-top: 20px;
+}
+
+.response h2 {
+  margin-bottom: 10px;
+}
+
+.response p {
+  font-style: italic;
+}
+.source-li{
+  list-style: none;
+}
+audio{
+  position: relative;
+  margin-left: -1rem;
+}
