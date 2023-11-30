@@ -1,3 +1,4 @@
+/* Återställ standardmarginaler, fyllning och färginställningar för alla element */
 * {
   background-color: white;
   margin: 0;
@@ -5,76 +6,86 @@
   color: black;
 }
 
+/* Stil för header */
 .header {
-  width: 100vw;
-  background-color: #007bff;
-  height: 10vh;
-  text-align: center;
-  justify-content: center;
-  font: 600 4vw Arial, sans-serif;
+  width: 100vw; /* Bredden täcker hela vybredden */
+  background-color: #007bff; /* Blå bakgrundsfärg */
+  height: 10vh; /* Höjden på huvudet är 10% av vyhöjden */
+  text-align: center; /* Centrerar texten horisontellt */
+  justify-content: center; /* Centrerar innehållet vertikalt */
+  font: 600 4vw Arial, sans-serif; /* Typsnittsegenskaper för rubriken */
 }
 
-/* Style for the container div */
+/* Stil för behållaren (container) */
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  max-width: 600px; /* Maximal bredd på 600 pixlar */
+  margin: 0 auto; /* Centrerar behållaren horisontellt */
+  padding: 20px; /* 20 pixlar utfyllnad runt innehållet */
+  font-family: Arial, sans-serif; /* Typsnitt för innehållet */
 }
 
-/* Style for the form */
+/* Stil för formuläret */
 form {
-  display: flex;
-  margin-bottom: 2em;
-  top: 1vh;
-  position: relative;
+  display: flex; /* Använder flexbox för att ordna elementen */
+  margin-bottom: 2em; /* Lägger till 2em marginal nedtill */
+  top: 1vh; /* Positionerar formen 1% från toppen av dess närmaste positionella förälder */
+  position: relative; /* Positionering är relativ till föräldern */
 }
 
+/* Stil för input-textfältet */
 input[type="text"] {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  flex: 1; /* Tar upp all tillgänglig flexutrymme */
+  padding: 10px; /* Utfyllnad på 10 pixlar runt texten */
+  font-size: 16px; /* Storlek på texten */
+  border: 1px solid #ccc; /* En pixels solid grå kant runt textfältet */
+  border-radius: 4px; /* Avrundade hörn */
 }
 
+/* Stil för knappen */
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 10px 20px; /* Utfyllnad på 10px över och under, 20px på sidorna */
+  font-size: 16px; /* Storlek på texten */
+  background-color: #007bff; /* Blå bakgrundsfärg för knappen */
+  border: none; /* Inga kanter */
+  border-radius: 4px; /* Avrundade hörn */
+  cursor: pointer; /* Muspekare ändras till en hand vid hovring */
 }
 
+/* Stil för knappens hover-effekt */
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Färgändring vid hovring */
 }
 
-/* Style for the error message */
+/* Stil för felmeddelandet */
 .error {
-  color: #ff0000;
-  margin-bottom: 10px;
-  top: 4vh;
-  position: relative;
+  color: #ff0000; /* Röd färg för felmeddelanden */
+  margin-bottom: 10px; /* 10px marginal nedåt */
+  top: 4vh; /* Positionerar felet 4% från toppen av dess närmaste positionella förälder */
+  position: relative; /* Positionering är relativ till föräldern */
 }
 
-/* Style for the API response */
+/* Stil för API-svaret */
 .response {
-  margin-top: 20px;
+  margin-top: 20px; /* 20px marginal ovanför API-svaret */
 }
 
+/* Stil för rubriken i API-svaret */
 .response h2 {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* 10px marginal nedåt för rubriken */
 }
 
+/* Stil för texten i API-svaret */
 .response p {
-  font-style: italic;
+  font-style: italic; /* Kursiv stil för texten */
 }
-.source-li{
-  list-style: none;
+
+/* Stil för ljudlistan i API-svaret */
+.source-li {
+  list-style: none; /* Tar bort punktlistestilen från ljudlistan */
 }
-audio{
-  position: relative;
-  margin-left: -1rem;
+
+/* Stil för ljudspelaren */
+audio {
+  position: relative; /* Positionering är relativ */
+  margin-left: -1rem; /* Justerar marginalen för att passa layouten */
 }
