@@ -4,6 +4,9 @@ In the project directory, you can run:
 ### `cd my-app`
 cd my-app: This command changes the directory to my-app. This is to navigate into the project folder before running other commands.
 
+### `npm i`
+Installs needed packages
+
 ### `npm start`
 
 Runs the app in the development mode.\
