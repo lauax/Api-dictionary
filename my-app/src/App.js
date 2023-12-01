@@ -15,7 +15,7 @@ function App() {
         // Hämta data från API:et baserat på söktermen
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);
         if (!response.ok) {
-          throw new Error('No definitions found for this word.');
+          throw new Error('Sökfältet får inte vara tomt');
         }
         // Konvertera svaret till JSON-format och uppdatera tillståndsvariablerna
         const data = await response.json();
@@ -39,6 +39,17 @@ function App() {
     setSearchTerm(event.target.value);
   };
 
+  // Funktion som körs vid sökning efter ordet
+  const handleSearch = () => {
+    if (searchTerm.trim() === '') {
+      setError('Sökfältet får inte vara tomt');
+      setWordData([]); // Rensa ord-data
+    } else {
+      // Utför sökning för termen
+      // ... din logik för att hämta ord-data baserat på searchTerm
+    }
+  };
+
   // JSX för att rendera komponenten och visa ordboksdata och felmeddelanden
   return (
     <div>
@@ -51,12 +62,13 @@ function App() {
             type="text"
             value={searchTerm}
             onChange={handleChange}
-            placeholder="Search for a word..."
+            placeholder="Skriv in sökord..."
           />
+          <button type="button" onClick={handleSearch}>Sök</button> 
         </form>
-
         {/* Visa felmeddelande om det finns ett fel */}
         {error && <p className="error">{error}</p>}
+        {/* ... resten av ditt JSX */}
 
         {/* Visa ordinformation om det finns data för ett sökt ord */}
         {wordData.length > 0 && (
